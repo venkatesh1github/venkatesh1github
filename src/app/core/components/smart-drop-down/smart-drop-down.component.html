@@ -1,0 +1,23 @@
+<div class="input-group mb-3">
+    <input type="text" class="form-control"  [(ngModel)]="selectedCountry" (change)="manualSearch()"  placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" (click)="manualSearch()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"  >
+        <a class="dropdown-item" *ngFor="let country of fileredCountries" (click)="selected(country)" >{{country}}</a>
+        <!-- <button type="button" class="btn btn-light" (click)="getCntryData()">{{"5 more..."}}</button> -->
+        <!-- <span class="more">{{"5 more..."}}</span> -->
+    </div>
+  </div>
+    </div>
+  </div>
+  <div *ngIf="createNewCountry">
+    <button type="button" class="btn btn-primary" (click)="addCountry()">Add & Select</button>
+  </div>
+ 
+   <div>
+     <li *ngFor ='let item of fileredCountries'>{{item}}</li>
+     <button type="button" class="btn btn-light" (click)="c1()">{{"5 more..."}}</button>
+   </div>
