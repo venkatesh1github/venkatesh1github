@@ -16,6 +16,7 @@ export class SmartDropDownComponent implements OnInit {
   showModal=false;
   loadMore=5;
  c1:any;
+ 
   
  
   constructor(private activatedRoute: ActivatedRoute) { }
