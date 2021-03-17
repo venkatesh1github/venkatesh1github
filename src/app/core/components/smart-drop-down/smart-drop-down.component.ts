@@ -15,8 +15,8 @@ export class SmartDropDownComponent implements OnInit {
   createNewCountry = false;
   showModal=false;
   loadMore=5;
- c1:any;
- 
+  c1:any;
+
   
  
   constructor(private activatedRoute: ActivatedRoute) { }
